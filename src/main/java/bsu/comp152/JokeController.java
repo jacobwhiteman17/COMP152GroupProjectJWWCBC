@@ -9,6 +9,7 @@ public class JokeController implements Initializable {
 
 
     @Override
-    public void initialize(URL location, ResourceBundle resources)
-    //fill here
+    public void initialize(URL location, ResourceBundle resources) {
+        //fill here
+    }
 }

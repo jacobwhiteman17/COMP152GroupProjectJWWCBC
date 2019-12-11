@@ -16,7 +16,7 @@ public class JokeDataHandler {
         this.webLocation = webLocation;
     }
 
-    public ArrayList<jokeDataType> getData{
+    public ArrayList<jokeDataType> getData(){
         var requestBuilder = HttpRequest.newBuilder();
         var dataRequest = requestBuilder.uri(URI.create(webLocation)).build();
         HttpResponse<String> response = null;
@@ -35,6 +35,8 @@ public class JokeDataHandler {
         }
         var goodData = response.body();
         //var jsonInterpreter = new Gson();
+        var array = new ArrayList<jokeDataType>();
+        return array;
     }
 
     class responseDataType{

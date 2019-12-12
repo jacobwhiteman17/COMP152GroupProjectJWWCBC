@@ -15,7 +15,7 @@ public class JokeDataHandler {
         dataGrabber = HttpClient.newHttpClient();
     }
 
-    public responseData getData(String webLocation){
+    public responseData getData(String webLocation){//getting the data
         var requestBuilder = HttpRequest.newBuilder();
         var dataRequest = requestBuilder.uri(URI.create(webLocation)).build();
         HttpResponse<String> response = null;
@@ -39,7 +39,7 @@ public class JokeDataHandler {
     }
 
 }
-class responseData{
+class responseData{//info from site
     String category;
     String type;
     String joke;

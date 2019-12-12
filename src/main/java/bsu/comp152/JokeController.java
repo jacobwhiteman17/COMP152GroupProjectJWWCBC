@@ -17,7 +17,7 @@ public class JokeController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources){
-        Model = new JokeDataHandler();
+        Model = new JokeDataHandler();//getting data
     }
 
     public void loadData(responseData data){
@@ -25,51 +25,51 @@ public class JokeController implements Initializable {
             joke.setText(data.joke);
             setup.setText("");
             punchline.setText("");
-            punch = "";
+            punch = "";//if the joke is a single part joke, then put the joke in the joke textfield and make the others empty
         }
         if(data.type.equals("twopart")){
             joke.setText("");
             setup.setText(data.setup);
-            punch = data.delivery;
+            punch = data.delivery;//if the joke is two part, add setup to setup field, store punchline
         }
     }
 
     @FXML
     public void getPunchButton(){
-        punchline.setText(punch);
+        punchline.setText(punch);//gets the punchline and sets it to the button
     }
 
     @FXML
     public String getCheckBoxes(){
-        var result = "?blacklistFlags=";
-        var filter = false;
+        var result = "?blacklistFlags=";//adds blacklists to URL
+        var filter = false;//this will be updated to true and used so when other checkboxes are selected, it keeps adding to the URL
 
         if(nsfw.isSelected()){
-            result+="nsfw";
+            result+="nsfw";//adds to URL
             filter = true;
         }
         if(religious.isSelected()){
             if(filter==true)
                 result+=",";
-            result+="religious";
+            result+="religious";//adds to URL
             filter = true;
         }
         if(political.isSelected()){
             if(filter==true)
                 result+=",";
-            result+="political";
+            result+="political";//adds to URL
             filter = true;
         }
         if(filter == false)
-            return "";
+            return "";//gets rid of text from URL
         return result;
     }
     @FXML
-    public void anyButtonPressed(){
+    public void anyButtonPressed(){//all buttons do the same thing. adds category to URL, then adds selected checkboxes
         var whole = site+"Any";
         var other = getCheckBoxes();
         whole+=other;
-        var data = Model.getData(whole);
+        var data = Model.getData(whole);//data from site
         loadData(data);
     }
     @FXML

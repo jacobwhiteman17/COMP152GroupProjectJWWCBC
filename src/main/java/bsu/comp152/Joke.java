@@ -19,8 +19,6 @@ public class Joke extends Application {
     public void start(Stage primaryStage) {
         Parent root = null;
         var loc = getClass().getResource("/bsu/comp152/Joke.fxml");//this was a PAIN to figure out. couldn't find the file for a long time
-        System.out.println(loc);
-
         try {
             root = FXMLLoader.load(loc);
         }catch (IOException e){

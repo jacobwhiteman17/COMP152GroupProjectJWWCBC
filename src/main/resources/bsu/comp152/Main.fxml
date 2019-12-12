@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="564.0" prefWidth="596.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bsu.comp152.MainController">
+<AnchorPane prefHeight="564.0" prefWidth="596.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bsu.comp152.MainController">
    <children>
       <Label layoutX="284.0" layoutY="6.0" text="Project" />
       <GridPane layoutX="99.0" layoutY="236.0" prefHeight="92.0" prefWidth="399.0">
@@ -16,7 +17,7 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button mnemonicParsing="false" text="Weather" />
+            <Button mnemonicParsing="false" onAction="#openWeather" text="Weather" />
             <Button fx:id="mainJokes" mnemonicParsing="false" onAction="#openJokes" text="Jokes" GridPane.columnIndex="1" />
             <Button mnemonicParsing="false" text="Currency" GridPane.columnIndex="2" />
          </children>

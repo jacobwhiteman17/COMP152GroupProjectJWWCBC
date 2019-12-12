@@ -1,10 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bsu.comp152.JokeController">
     <children>
-        <VBox layoutX="250.0" layoutY="85.0" prefHeight="200.0" prefWidth="100.0" />
+        <HBox layoutX="14.0" layoutY="36.0" prefHeight="329.0" prefWidth="577.0">
+            <children>
+                <VBox prefHeight="329.0" prefWidth="143.0">
+                    <children>
+                        <TextField prefHeight="43.0" prefWidth="147.0" text="What kind of jokes do you want to hear?" />
+                        <Button fx:id="misc" mnemonicParsing="false" onAction="#miscButtonPressed" prefHeight="46.0" prefWidth="147.0" text="Misc" />
+                        <Button fx:id="programming" mnemonicParsing="false" onAction="#programmingButtonPressed" prefHeight="54.0" prefWidth="154.0" text="Programming" />
+                        <Button fx:id="any" mnemonicParsing="false" onAction="#anyButtonPressed" prefHeight="52.0" prefWidth="142.0" text="Any" />
+                    </children>
+                </VBox>
+                <VBox prefHeight="329.0" prefWidth="14.0" />
+                <VBox prefHeight="200.0" prefWidth="100.0">
+                    <children>
+                        <TextField text="Don't Show" />
+                        <CheckBox fx:id="nsfw" mnemonicParsing="false" text="NSFW" />
+                        <CheckBox fx:id="religious" mnemonicParsing="false" text="Religious" />
+                        <CheckBox fx:id="political" mnemonicParsing="false" text="Political" />
+                    </children>
+                </VBox>
+                <VBox prefHeight="329.0" prefWidth="15.0" />
+                <VBox prefHeight="329.0" prefWidth="307.0">
+                    <children>
+                        <TextField fx:id="joke" />
+                        <TextField fx:id="setup" />
+                        <TextField fx:id="punchline" />
+                        <Button fx:id="getPunch" mnemonicParsing="false" onAction="#getPunchButton" text="Punchline" />
+                    </children></VBox>
+            </children>
+        </HBox>
     </children>
 </AnchorPane>

@@ -1,7 +1,13 @@
+//Jacob Whiteman
 package bsu.comp152;
 
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class Joke extends Application {
 
@@ -11,6 +17,18 @@ public class Joke extends Application {
 
     @Override
     public void start(Stage primaryStage) {
+        Parent root = null;
+        var loc = getClass().getResource("/bsu/comp152/Joke.fxml");
+        System.out.println(loc);
 
+        try {
+            root = FXMLLoader.load(loc);
+        }catch (IOException e){
+            System.out.println("Couldn't Find FXML file!!!!!!");
+        }
+        Scene windowContents = new Scene(root, 600,400);
+        primaryStage.setScene(windowContents);
+        primaryStage.setTitle("Jokes");
+        primaryStage.show();
     }
 }

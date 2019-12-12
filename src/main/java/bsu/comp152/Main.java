@@ -23,7 +23,7 @@ public class Main extends Application {
         }catch (IOException e) {
             System.out.println("Need the FXML file");
         }
-        Scene windowContents = new Scene(root, 300,400);
+        Scene windowContents = new Scene(root, 600,450);
         primaryStage.setScene(windowContents);
         primaryStage.setTitle("COMP-152 Group Project");
         primaryStage.show();

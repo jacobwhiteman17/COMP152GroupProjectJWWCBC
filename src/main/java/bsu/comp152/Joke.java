@@ -18,7 +18,7 @@ public class Joke extends Application {
     @Override
     public void start(Stage primaryStage) {
         Parent root = null;
-        var loc = getClass().getResource("/bsu/comp152/Joke.fxml");
+        var loc = getClass().getResource("/bsu/comp152/Joke.fxml");//this was a PAIN to figure out. couldn't find the file for a long time
         System.out.println(loc);
 
         try {
@@ -29,6 +29,6 @@ public class Joke extends Application {
         Scene windowContents = new Scene(root, 600,400);
         primaryStage.setScene(windowContents);
         primaryStage.setTitle("Jokes");
-        primaryStage.show();
+        primaryStage.show();//setting the stage
     }
 }

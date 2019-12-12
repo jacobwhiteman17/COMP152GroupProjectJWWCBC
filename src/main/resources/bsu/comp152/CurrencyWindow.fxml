@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="646.0" prefWidth="957.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bsu.comp152.CurrencyController">
+    <children>
+        <HBox layoutX="6.0" layoutY="6.0" prefHeight="637.0" prefWidth="948.0">
+            <children>
+                <VBox prefHeight="637.0" prefWidth="313.0">
+                    <children>
+                        <Label prefHeight="52.0" prefWidth="237.0" text="Choose currency:" textFill="#bf3939">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <MenuButton mnemonicParsing="false" text="Currency possibilities:">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#selectMenuItem" text="USD" />
+                                <MenuItem mnemonicParsing="false" onAction="#selectMenuItem" text="AUD" />
+                                <MenuItem mnemonicParsing="false" onAction="#selectMenuItem" text="CAD" />
+                                <MenuItem mnemonicParsing="false" onAction="#selectMenuItem" text="CHF" />
+                                <MenuItem mnemonicParsing="false" onAction="#selectMenuItem" text="CNY" />
+                                <MenuItem mnemonicParsing="false" onAction="#selectMenuItem" text="EUR" />
+                                <MenuItem mnemonicParsing="false" onAction="#selectMenuItem" text="GBP" />
+                                <MenuItem mnemonicParsing="false" onAction="#selectMenuItem" text="HKD" />
+                            </items>
+                        </MenuButton>
+                        <Button mnemonicParsing="false" onAction="#loadData" prefHeight="68.0" prefWidth="150.0" text="Display currency" />
+                    </children>
+                </VBox>
+                <VBox prefHeight="637.0" prefWidth="316.0">
+                    <children>
+                        <ListView fx:id="ListControl" prefHeight="638.0" prefWidth="316.0" />
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>

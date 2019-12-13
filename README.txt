@@ -1,4 +1,5 @@
 Group Project Consisting of a main menu and 3 API applications
+Please run from Main.java
 
 Weather Application:
 Created by: William Cobb 12/11/2019

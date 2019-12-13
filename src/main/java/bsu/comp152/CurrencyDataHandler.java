@@ -19,7 +19,6 @@ public class CurrencyDataHandler {
     }
 
 
-
     public ArrayList<currencyDataType> getData(){
         var requestBuilder = HttpRequest.newBuilder();
         var dataRequest = requestBuilder.uri(URI.create(webLocation)).build();

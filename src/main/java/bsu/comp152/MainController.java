@@ -43,4 +43,18 @@ public class MainController {
         primaryStage.setResizable(false); //prevents resizing
         primaryStage.show(); //displays window
     }
+    public void openCurrency() {
+        Parent root = null;
+        var loc = getClass().getResource("/bsu/comp152/CurrencyWindow.fxml");
+        try {
+            root = FXMLLoader.load(loc);
+        }catch (IOException e){
+            System.out.println("The FXML file could not be found.");
+        }
+        Scene windowContents = new Scene(root, 900,400);
+        Stage recipeWindow = new Stage();
+        recipeWindow.setScene(windowContents);
+        recipeWindow.setTitle("Currency Exchange window");
+        recipeWindow.show();
+    }
 }
